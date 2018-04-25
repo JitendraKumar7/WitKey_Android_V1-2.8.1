@@ -1,0 +1,330 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appBar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="app.witkey.live.activities.LoginOptionsActivity">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_login_option_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <!--PARENT LAYOUT-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <!--CHILD 1 FOR ICONS-->
+        <LinearLayout
+            android:id="@+id/textParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingTop="@dimen/x20dp"-->
+                    <!--android:src="@drawable/logo" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center|top">
+
+                <ImageView
+                    android:id="@+id/textImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x20dp"
+                    android:src="@drawable/gold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--CHILD 2 FOR ACTIONS-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <!--CHILD 2 - CHILD 1 FOR BUTTONS-->
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+                <!--ACTIONS FB-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/btn_login_facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon1"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <!--ACTIONS GOOGLE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/btn_login_google"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon2"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <!--ACTIONS WE CHAT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_login_wechat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon3"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!--ACTIONS EMAIL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/btn_login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon4" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--CHILD 2 - CHILD 2 FOR TEXT-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/text2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timerParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/chat_rounded_corners"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x15dp"
+        android:paddingLeft="@dimen/x15dp"
+        android:paddingRight="@dimen/x15dp"
+        android:paddingTop="@dimen/x15dp"
+        android:visibility="gone">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x10dp"
+            android:gravity="center|center_vertical"
+            android:text="Coming Soon"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <app.witkey.live.utils.circleprogressbar.CircleProgressBar
+                android:id="@+id/custom_progressDay"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/x5dp"
+                android:visibility="visible"
+                appBar:line_count="24"
+                appBar:line_width="4dp"
+                appBar:progress_background_color="@color/witkey_dim_white"
+                appBar:progress_end_color="@color/witkey_orange"
+                appBar:progress_shader="sweep"
+                appBar:progress_start_color="@color/witkey_orange"
+                appBar:progress_stroke_cap="round"
+                appBar:progress_stroke_width="3dp"
+                appBar:progress_text_color="@color/white"
+                appBar:style="solid_line" />
+
+            <app.witkey.live.utils.circleprogressbar.CircleProgressBar
+                android:id="@+id/custom_progressHour"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/x5dp"
+                android:visibility="visible"
+                appBar:line_count="60"
+                appBar:line_width="4dp"
+                appBar:progress_background_color="@color/witkey_dim_white"
+                appBar:progress_end_color="@color/witkey_orange"
+                appBar:progress_shader="sweep"
+                appBar:progress_start_color="@color/witkey_orange"
+                appBar:progress_stroke_cap="round"
+                appBar:progress_stroke_width="3dp"
+                appBar:progress_text_color="@color/white"
+                appBar:style="solid_line" />
+
+            <app.witkey.live.utils.circleprogressbar.CircleProgressBar
+                android:id="@+id/custom_progressMin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/x5dp"
+                android:visibility="visible"
+                appBar:line_count="60"
+                appBar:line_width="4dp"
+                appBar:progress_background_color="@color/witkey_dim_white"
+                appBar:progress_end_color="@color/witkey_orange"
+                appBar:progress_shader="sweep"
+                appBar:progress_start_color="@color/witkey_orange"
+                appBar:progress_stroke_cap="round"
+                appBar:progress_stroke_width="3dp"
+                appBar:progress_text_color="@color/white"
+                appBar:style="solid_line" />
+
+            <app.witkey.live.utils.circleprogressbar.CircleProgressBar
+                android:id="@+id/custom_progressSec"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="visible"
+                appBar:line_count="60"
+                appBar:line_width="4dp"
+                appBar:progress_background_color="@color/witkey_dim_white"
+                appBar:progress_end_color="@color/witkey_orange"
+                appBar:progress_shader="sweep"
+                appBar:progress_start_color="@color/witkey_orange"
+                appBar:progress_stroke_cap="round"
+                appBar:progress_stroke_width="3dp"
+                appBar:progress_text_color="@color/white"
+                appBar:style="solid_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x5dp"
+                android:gravity="center"
+                android:text="@string/days"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x12dp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x5dp"
+                android:gravity="center"
+                android:text="@string/hours"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x12dp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x5dp"
+                android:gravity="center"
+                android:text="@string/minutes"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x12dp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/seconds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

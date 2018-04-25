@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/layout_message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/emptyGreyView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:background="@color/witkey_dim_silver" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x15dp"
+        android:layout_marginRight="@dimen/x15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/phoneImageView"
+                    android:layout_width="@dimen/x40dp"
+                    android:layout_height="@dimen/x40dp"
+                    android:src="@drawable/phone" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:layout_toRightOf="@+id/phoneImageView"
+                    android:text="@string/phone"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="14sp" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Unprotected!"
+                    android:textColor="@color/witkey_orange"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/facebookImageView"
+                    android:layout_width="@dimen/x40dp"
+                    android:layout_height="@dimen/x40dp"
+                    android:src="@drawable/facebook" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:layout_toRightOf="@+id/facebookImageView"
+                    android:text="@string/facebook"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/googleImageView"
+                    android:layout_width="@dimen/x40dp"
+                    android:layout_height="@dimen/x40dp"
+                    android:src="@drawable/google" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:layout_toRightOf="@+id/googleImageView"
+                    android:text="@string/google"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/wechatImageView"
+                    android:layout_width="@dimen/x40dp"
+                    android:layout_height="@dimen/x40dp"
+                    android:src="@drawable/wechat" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:layout_toRightOf="@+id/wechatImageView"
+                    android:text="@string/wechat"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/x100dp"
+        android:gravity="bottom">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbarThumbVertical="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/witkey_dim_silver"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x35dp"
+                android:paddingRight="@dimen/x25dp"
+                android:paddingTop="@dimen/x20dp">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/why_connect_account"
+                    android:textColor="@color/witkey_orange"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:orientation="horizontal">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x2dp"
+                        android:text="@string/u2022"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20dp"
+                        android:paddingBottom="@dimen/x3dp"
+                        android:paddingTop="@dimen/x3dp"
+                        android:text="@string/connect_to_phone_is_highly_recommended"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:orientation="horizontal">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x2dp"
+                        android:text="@string/u2022"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20dp"
+                        android:paddingBottom="@dimen/x3dp"
+                        android:paddingTop="@dimen/x3dp"
+                        android:text="@string/your_connected_phone_will_be"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:orientation="horizontal">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x2dp"
+                        android:text="@string/u2022"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20dp"
+                        android:paddingBottom="@dimen/x3dp"
+                        android:paddingTop="@dimen/x3dp"
+                        android:text="@string/once_connected_you_can_easily"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x25dp"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:orientation="horizontal">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x2dp"
+                        android:text="@string/u2022"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20dp"
+                        android:paddingBottom="@dimen/x3dp"
+                        android:paddingTop="@dimen/x3dp"
+                        android:text="@string/you_can_set_to_show_your_social"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

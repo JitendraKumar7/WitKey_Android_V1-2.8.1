@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_parent_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60dp"
+            android:background="@drawable/top_faded_bg"
+            android:paddingLeft="@dimen/x15dp"
+            android:paddingRight="@dimen/x15dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/profileNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sam_tan"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/profileIDTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileNameTextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/x2dp"
+                    android:text="WITKEY ID NO: 1522888"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/x0dp"
+                android:src="@drawable/back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/x0dp"
+                android:src="@drawable/settings" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/profile_image_parent_frame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x0dp"
+                android:layout_weight="0.9">
+
+                <ImageView
+                    android:id="@+id/userProfileImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/place_holder_videos" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/x20dp">
+
+                    <LinearLayout
+                        android:id="@+id/giftsFanbaseParentFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/giftsCountTextView"
+                            android:layout_width="@dimen/x0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingRight="@dimen/x8dp"
+                            android:text="SEND 88400 GIFTS"
+                            android:textColor="@color/white"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="@dimen/x2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/fanBaseCountTextView"
+                            android:layout_width="@dimen/x0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/x8dp"
+                            android:text="FANBASE 685"
+                            android:textColor="@color/white"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/userStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/giftsFanbaseParentFrame"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/x10dp"
+                        android:text="i'm the reason someone smiles today"
+                        android:textColor="@color/white"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x0dp"
+                android:layout_weight="1.1"
+                android:background="@color/witkey_dim_white">
+
+                <LinearLayout
+                    android:id="@+id/userLevelDiamondParentFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/x0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/x10dp"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <RelativeLayout
+                            android:id="@+id/userLevelBoxParentFrame"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/box" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/x4dp"
+                                android:src="@drawable/moment" />
+
+                            <app.witkey.live.utils.customviews.CustomTextView
+                                android:id="@+id/userLevelBoxTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="110"
+                                android:textColor="@color/witkey_orange"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/x0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x8dp"
+                        android:layout_weight="1"
+                        android:gravity="start">
+
+                        <RelativeLayout
+                            android:id="@+id/diamondBoxParentFrame"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/box" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/x4dp"
+                                android:src="@drawable/diamond" />
+
+                            <app.witkey.live.utils.customviews.CustomTextView
+                                android:id="@+id/diamondsCountBoxTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="150"
+                                android:textColor="@color/witkey_orange"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/momentsProfileToggleParentFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userLevelDiamondParentFrame"
+                    android:layout_marginBottom="@dimen/x20dp"
+                    android:layout_marginTop="@dimen/x20dp"
+                    android:background="@color/witkey_dim_white"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/myMomentsRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/x25dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="right"
+                        android:text="@string/my_moments"
+                        android:textColor="@drawable/orange_black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/myProfileRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x25dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="left"
+                        android:text="@string/my_profile"
+                        android:textColor="@drawable/orange_black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/momentsParentFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/momentsProfileToggleParentFrame"
+                    android:background="@color/witkey_dim_white"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/momentsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/noMomentsParentFrame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/x20dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/momentImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/moment_icon" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/noMomentsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/momentImageView"
+                            android:layout_marginTop="@dimen/x5dp"
+                            android:text="@string/no_moments_posted_yet"
+                            android:textColor="@color/grey" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/profileParentFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/momentsProfileToggleParentFrame"
+                    android:background="@color/witkey_dim_white"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/profileRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_background_dimmer"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <include
+                        android:id="@+id/includedLayoutProfile"
+                        layout="@layout/layout_profile_setting_options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/x80dp"
+                        android:layout_marginRight="@dimen/x5dp"
+                        android:layout_marginTop="-1dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

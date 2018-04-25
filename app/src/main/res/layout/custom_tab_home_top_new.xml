@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customTabTopParent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/customTabImage"-->
+        <!--android:layout_width="17dp"-->
+        <!--android:padding="1dp"-->
+        <!--android:layout_height="17dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_marginLeft="@dimen/x2dp"-->
+        <!--android:src="@drawable/new_" />-->
+
+    <app.witkey.live.utils.customviews.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/customTabParent"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/x4dp"
+        android:paddingRight="@dimen/x6dp"
+        android:text="text"
+        android:layout_gravity="center_vertical"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="@dimen/x18dp" />
+</LinearLayout>
+
+
+    <!--
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <app.com.witkey.utils.customviews.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/customTabParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/new_"
+        android:drawablePadding="@dimen/x3dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/x4dp"
+        android:paddingRight="@dimen/x4dp"
+        android:text="text"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="@dimen/x10dp" />
+
+
+    -->

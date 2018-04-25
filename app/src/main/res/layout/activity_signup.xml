@@ -1,0 +1,247 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/witkey_dim_Login"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/witkey_dim_Login"
+        android:scrollbarStyle="outsideOverlay"
+        android:windowSoftInputMode="stateHidden">
+
+        <LinearLayout
+            android:id="@+id/signupParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".live.witkey.activities.SignUpActivity">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/mProfileImageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/x5dp"
+                    android:src="@drawable/user_place_holder_round" />
+
+                <ImageView
+                    android:layout_width="@dimen/x30dp"
+                    android:layout_height="@dimen/x30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x5dp"
+                    android:background="@drawable/circle_fill"
+                    android:scaleType="center"
+                    android:src="@drawable/add_friend" />
+
+            </RelativeLayout>
+
+
+            <include
+                android:id="@+id/includedLayout"
+                layout="@layout/layout_profile_pic_detector"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x90dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/x30dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x40dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x45dp"
+                android:paddingRight="@dimen/x45dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/email"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="@dimen/x15dp" />
+
+                    <app.witkey.live.utils.customviews.CustomEditText
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x35dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusForward="@+id/edtUserName"
+                        android:padding="@dimen/x3dp"
+                        android:textColor="@color/witkey_dark_brown"
+                        android:textSize="@dimen/x15dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_separator_dp"
+                        android:layout_marginTop="@dimen/x0dp"
+                        android:background="@color/witkey_orange" />
+
+                </LinearLayout>
+
+                <!--EMAIL OR PHONE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/username"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="@dimen/x15dp" />
+
+                    <app.witkey.live.utils.customviews.CustomEditText
+                        android:id="@+id/edtUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x35dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusForward="@+id/edtPassword"
+                        android:padding="@dimen/x3dp"
+                        android:textColor="@color/witkey_dark_brown"
+                        android:textSize="@dimen/x15dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_separator_dp"
+                        android:layout_marginTop="@dimen/x0dp"
+                        android:background="@color/witkey_orange" />
+
+                </LinearLayout>
+
+                <!--Password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/gender"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="@dimen/x15dp" />
+
+                    <app.witkey.live.utils.customviews.CustomEditText
+                        android:id="@+id/edtGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x35dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:nextFocusForward="@+id/edtPassword"
+                        android:padding="@dimen/x3dp"
+                        android:textColor="@color/witkey_dark_brown"
+                        android:textSize="@dimen/x15dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_separator_dp"
+                        android:layout_marginTop="@dimen/x0dp"
+                        android:background="@color/witkey_orange" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/password"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="@dimen/x15dp" />
+
+                    <app.witkey.live.utils.customviews.CustomEditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x35dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/x3dp"
+                        android:textColor="@color/witkey_dark_brown"
+                        android:textSize="@dimen/x15dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_separator_dp"
+                        android:layout_marginTop="@dimen/x0dp"
+                        android:background="@color/witkey_orange" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:background="@drawable/button_large_rounded_corners"
+                    android:text="@string/sign_up"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/x15dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.9"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/x15dp"
+            android:paddingTop="@dimen/x5dp"
+            android:weightSum="3">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/giftTextView"
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/gift"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/rewardsTextView"
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/tornadoes"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/bagsTextView"
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/badge"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/giftsRecyclerViewParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_overlay">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/giftsRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/noGiftImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/gift_new" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_overlay"
+            android:paddingBottom="@dimen/x10dp"
+            android:paddingTop="@dimen/x10dp">
+
+            <Button
+                android:id="@+id/btnUse"
+                android:layout_width="@dimen/x80dp"
+                android:layout_height="@dimen/x30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x20dp"
+                android:background="@drawable/button_border_rounded_corners_state"
+                android:enabled="false"
+                android:paddingBottom="@dimen/x3dp"
+                android:paddingTop="@dimen/x3dp"
+                android:text="@string/use"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/witkey_orange"
+                android:textSize="13sp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/noGiftMessageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/sorry_nothing_in_the_bag"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

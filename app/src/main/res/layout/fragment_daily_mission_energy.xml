@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.dashboard.stream.DailyMissionEnergyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:id="@+id/dailyEnergyMissionLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x40dp"
+                android:text="@string/daily_energy_mission"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x40dp"
+                    android:layout_height="@dimen/x40dp"
+                    android:src="@drawable/energy" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/energyValueTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x10dp"
+                        android:text="45"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/energyValueTextView"
+                        android:layout_alignBottom="@+id/energyValueTextView"
+                        android:layout_marginLeft="@dimen/x3dp"
+                        android:layout_toRightOf="@+id/energyValueTextView"
+                        android:text="@string/energy"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/energyProgressBar"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/x8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x15dp"
+                android:padding="0dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/user_level_progress"
+                android:thumb="@null"
+                android:thumbOffset="0dp" />
+
+            <LinearLayout
+                android:id="@+id/userLevelProgressParentFrame"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x5dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/levelPreviousTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="0"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="@dimen/x0dp"
+                    android:layout_height="@dimen/x1dp"
+                    android:layout_weight="1" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/goldLevelNextTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="100"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10dp"
+                android:layout_marginRight="@dimen/x10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/login_to_view_live_broadcasts"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="14sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x1dp"
+                        android:gravity="center"
+                        android:text="@string/earn_10_energy_for_every_1_min_of_viewing"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/share_live_broadcasts_to_friends"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="14sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x1dp"
+                        android:gravity="center"
+                        android:text="@string/earn_10_energy_for_every_3_shares"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invite_friends_to_broadcasts_events"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="14sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x1dp"
+                        android:gravity="center"
+                        android:text="@string/earn_50_energy_for_every_2_invites"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/fill_in_your_profile_form"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="14sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x1dp"
+                        android:gravity="center"
+                        android:text="@string/earn_15_energy_for_completing_your_profile_form"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/connect_your_account_to_your_phone"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="14sp" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x1dp"
+                        android:gravity="center"
+                        android:text="@string/earn_15_energy_for_connecting_your_phone"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/complete100EnergyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/x20dp"
+                android:layout_marginRight="@dimen/x20dp"
+                android:layout_marginTop="@dimen/x40dp"
+                android:gravity="center_horizontal"
+                android:text="@string/complete_all_to_earn_your_100_energy_and_claim_10_tornados"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/tornadoIV"
+                android:layout_width="@dimen/x45dp"
+                android:layout_height="@dimen/x45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x10dp"
+                android:src="@drawable/daily_mission1" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/complete500EnergyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/x10dp"
+                android:layout_marginRight="@dimen/x10dp"
+                android:layout_marginTop="@dimen/x20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/achieve_500_energy_to_unlock_your_mystery_gift"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/boxIV"
+                android:layout_width="@dimen/x45dp"
+                android:layout_height="@dimen/x45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x10dp"
+                android:src="@drawable/daily_mission2" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

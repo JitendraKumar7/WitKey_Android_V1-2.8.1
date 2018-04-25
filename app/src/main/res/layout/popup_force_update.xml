@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/force_update_bg" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/textTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x1dp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/witkey_version_update"
+            android:textColor="@color/grey_dark"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5dp">
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x35dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/x3dp"
+                android:layout_marginEnd="@dimen/x20dp"
+                android:layout_marginLeft="@dimen/x5dp"
+                android:layout_marginRight="@dimen/x5dp"
+                android:layout_marginStart="@dimen/x20dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_rounded_corners"
+                android:gravity="center"
+                android:paddingTop="@dimen/x3dp"
+                android:text="@string/cancel"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnupdate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x35dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/x5dp"
+            android:layout_marginEnd="@dimen/x15dp"
+            android:layout_marginLeft="@dimen/x5dp"
+            android:layout_marginRight="@dimen/x5dp"
+            android:layout_marginStart="@dimen/x15dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_corners"
+            android:gravity="center"
+            android:paddingTop="@dimen/x3dp"
+            android:text="@string/update_"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

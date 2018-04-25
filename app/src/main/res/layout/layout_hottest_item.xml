@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mParentFrameHottest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/hottestParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mHottestCardImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_place_holder_square"
+                android:layout_marginBottom="@dimen/x40dp"/>
+
+            <LinearLayout
+                android:id="@+id/imageProfileView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/x0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--android:layout_below="@id/mHottestCardImageView"-->
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/hottestTextView"
+                    style="@style/ShadowText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:layout_marginRight="@dimen/x5dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="@dimen/x1dp"
+                    android:paddingLeft="@dimen/x0dp"
+                    android:paddingRight="@dimen/x5dp"
+                    android:paddingTop="@dimen/x1dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="11dp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/micParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x1dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/x5dp"
+                            android:background="@drawable/button_rounded_corners">
+
+                            <app.witkey.live.utils.customviews.CustomTextView
+                                android:id="@+id/micTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawablePadding="@dimen/x3dp"
+                                android:drawableRight="@drawable/star"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/x20dp"
+                                android:paddingRight="@dimen/x3dp"
+                                android:singleLine="true"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x10dp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="@dimen/x18dp"
+                            android:layout_height="@dimen/x18dp"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/circle_fill_mic" />
+                        <!--android:layout_alignParent="true"-->
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/hottestCardTopView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/showLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/equalizer"
+                        android:layout_width="@dimen/x45dp"
+                        android:layout_height="@dimen/x20dp"
+                        android:src="@drawable/empty"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/liveStatusDot"
+                        android:layout_width="@dimen/x8dp"
+                        android:layout_height="@dimen/x8dp"
+                        android:scaleType="center"
+                        android:src="@drawable/orange_color_dot"
+                        android:visibility="gone" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/liveStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x2dp"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/x2dp"
+                        android:paddingRight="@dimen/x2dp"
+                        android:text=""
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="@dimen/x12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hourseAgo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:background="@drawable/featured_two_round_corners">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/mLastSeenTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x3dp"
+                        android:layout_marginLeft="@dimen/x5dp"
+                        android:layout_marginRight="@dimen/x5dp"
+                        android:layout_marginTop="@dimen/x3dp"
+                        android:text="@string/hr_ago"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/hourseAgo"
+                    android:layout_marginLeft="@dimen/x10dp"
+                    android:layout_marginTop="@dimen/x3dp"
+                    android:background="@drawable/featured_rounded_corners"
+                    android:paddingBottom="@dimen/x3dp"
+                    android:paddingLeft="@dimen/x7dp"
+                    android:paddingRight="@dimen/x7dp"
+                    android:paddingTop="@dimen/x3dp">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/mViewsTextView"
+                        style="@style/ShadowTextTopSpender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/featured_views"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

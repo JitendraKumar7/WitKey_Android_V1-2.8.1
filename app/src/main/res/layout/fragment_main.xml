@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar_parent_frame">
+
+        <app.witkey.live.utils.customviews.SmoothViewPager
+            android:id="@+id/mainPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mTabLayout" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/mTabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/x70dp">
+
+            <include
+                layout="@layout/layout_custom_bottom_tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/mTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/witkey_dim_white"
+                android:visibility="gone"
+                app:tabIndicatorHeight="@dimen/x0dp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>
+
+    <!--
+    <FrameLayout
+            android:id="@+id/mTabContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:id="@+id/bottomTab"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45dp"
+                android:layout_marginLeft="@dimen/x30dp"
+                android:layout_marginRight="@dimen/x30dp">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/mTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x45dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/witkey_dim_white"
+                    app:tabIndicatorHeight="@dimen/x0dp" />
+
+            </LinearLayout>
+        </FrameLayout>
+    -->

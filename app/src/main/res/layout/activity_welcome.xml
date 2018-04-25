@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg10"
+    android:gravity="center"
+    tools:context=".activities.SplashActivity">
+
+    <LinearLayout
+        android:id="@+id/welcomeParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginLeft="@dimen/x15dp"
+        android:layout_marginRight="@dimen/x15dp"
+        android:background="@drawable/welcome_view_rounded_corners"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/customTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/welcome_to_witkey"
+                android:textColor="@color/witkey_orange"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:id="@+id/SCROLLER_ID"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="vertical">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/customTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top"
+                    android:padding="@dimen/x20dp"
+                    android:text="@string/welcome_desc"
+                    android:textColor="@color/witkey_orange"
+                    android:textSize="@dimen/x13dp"
+                    android:textStyle="normal" />
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnProceed"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x40dp"
+                android:background="@drawable/button_rounded_corners"
+                android:paddingLeft="@dimen/x40dp"
+                android:paddingRight="@dimen/x40dp"
+                android:text="@string/proceed"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

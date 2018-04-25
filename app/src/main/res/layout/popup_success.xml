@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/popup_border_corners"
+        android:orientation="vertical">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x1dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/thank_you"
+            android:textColor="@color/grey_dark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/dollarTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x1dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="$0"
+            android:textColor="@color/witkey_orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/detailTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x1dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/grey_dark"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/x10dp"
+            android:layout_marginTop="@dimen/x10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_border_rounded_corners_follow"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30dp"
+                android:paddingRight="@dimen/x30dp"
+                android:text="@string/cancel_"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/witkey_orange"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/reward_bg_1" />
+
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="1000 Chips"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/tv_promo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/promo_text_1"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnclaim"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x5dp"
+            android:layout_marginRight="@dimen/x5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_corners"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x3dp"
+            android:paddingLeft="@dimen/x20dp"
+            android:paddingRight="@dimen/x20dp"
+            android:paddingTop="@dimen/x3dp"
+            android:text="@string/claim_reward_now"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

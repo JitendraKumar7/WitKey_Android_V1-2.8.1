@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_parent_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60dp"
+            android:background="@drawable/top_faded_bg"
+            android:paddingLeft="@dimen/x15dp"
+            android:paddingRight="@dimen/x15dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/profileNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sam_tan"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/profileIDTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileNameTextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/x2dp"
+                    android:text="WITKEY ID NO: 1522888"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/x0dp"
+                android:src="@drawable/back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/x0dp"
+                android:src="@drawable/settings" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_image_parent_frame"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:id="@+id/userProfileImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_dummy" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/x20dp">
+
+                    <LinearLayout
+                        android:id="@+id/giftsFanbaseParentFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/giftsCountTextView"
+                            android:layout_width="@dimen/x0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingRight="@dimen/x8dp"
+                            android:text="SEND 88400 GIFTS"
+                            android:textColor="@color/white"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="@dimen/x2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/fanBaseCountTextView"
+                            android:layout_width="@dimen/x0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/x8dp"
+                            android:text="FANBASE 685"
+                            android:textColor="@color/white"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/userStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/giftsFanbaseParentFrame"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/x10dp"
+                        android:text="i'm the reason someone smiles today"
+                        android:textColor="@color/white"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_background_dimmer"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <include
+                        android:id="@+id/includedLayoutProfile"
+                        layout="@layout/layout_profile_setting_options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/x80dp"
+                        android:layout_marginRight="@dimen/x5dp"
+                        android:layout_marginTop="-1dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSweetSheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</LinearLayout>

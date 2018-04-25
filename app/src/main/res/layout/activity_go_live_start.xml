@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wowza.gocoder.sdk.api.devices.WZCameraView
+    android:id="@+id/camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:adjustViewBounds="true"
+    android:visibility="visible" />
+
+    <SurfaceView
+        android:id="@+id/camerapreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20dp">
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x30dp"
+                android:layout_marginRight="@dimen/x30dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/x7dp"
+                android:visibility="visible"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/goLiveSignalBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/x24dp"
+                        android:src="@drawable/go_live_start_icon1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/goLiveScreenBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/x20dp"
+                        android:src="@drawable/go_live_start_icon2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/goLiveCalanderBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/x2dp"
+                        android:layout_marginTop="@dimen/x2dp"
+                        android:padding="26dp"
+                        android:src="@drawable/go_live_start_icon3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_top"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <app.witkey.live.utils.customviews.CustomEditText
+                    android:id="@+id/goLiveTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawablePadding="@dimen/x8dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="@string/you_live_s_title"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/x20dp"
+                    android:paddingRight="@dimen/x20dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp" />
+
+                <app.witkey.live.utils.customviews.CustomEditText
+                    android:id="@+id/goLiveIDTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5dp"
+                    android:background="@color/transparent"
+                    android:drawablePadding="@dimen/x8dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="@string/tag_your_id"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/x20dp"
+                    android:paddingRight="@dimen/x20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_icons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_text"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/x20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x5dp"
+                    android:layout_marginLeft="@dimen/x80dp"
+                    android:layout_marginRight="@dimen/x80dp"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/goLiveFacebookBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icon1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/goLiveGoogleBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icon2" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/goLiveWechatBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icon3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/goLiveEmailBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icon4"
+                            android:tint="@color/witkey_orange" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/goLiveBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x45dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/x50dp"
+                    android:layout_marginRight="@dimen/x50dp"
+                    android:background="@drawable/button_large_rounded_corners"
+                    android:gravity="center"
+                    android:text="@string/go_live"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/goLiveCancelBTN"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x10dp"
+        android:layout_marginTop="@dimen/x20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_close_white_24dp" />
+
+    <View
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+</RelativeLayout>

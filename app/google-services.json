@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "401362392369",
+    "firebase_url": "https://witkey-fc706.firebaseio.com",
+    "project_id": "witkey-fc706",
+    "storage_bucket": "witkey-fc706.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401362392369:android:10c9d46a835252c5",
+        "android_client_info": {
+          "package_name": "app.witkey.live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401362392369-9hn1lvnmb54ecj1dnkppf71oljsstef5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.witkey.live",
+            "certificate_hash": "7a7279c333e60a37556a9700225757bea194dfea"
+          }
+        },
+        {
+          "client_id": "401362392369-05r7vkcuqs25s8pumclkcm8u9kjijjhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCv6ipm7G3dsYMd6JWqtCPqefB1w_39TI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401362392369-05r7vkcuqs25s8pumclkcm8u9kjijjhf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "401362392369-3mi3jr2a0lhhogerg7of7voguko1uvob.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.witkey.live"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x30dp"
+        android:paddingLeft="@dimen/x30dp"
+        android:paddingRight="@dimen/x30dp"
+        android:paddingTop="@dimen/x30dp">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/x10dp"
+            android:text="@string/select_gender"
+            android:textColor="@color/grey_dark"
+            android:textSize="@dimen/x15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/x10dp">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/maleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_rounded_corners"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/x7dp"
+                    android:paddingTop="@dimen/x7dp"
+                    android:text="@string/male"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x13dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/x10dp">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/femaleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_rounded_corners"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/x7dp"
+                    android:paddingTop="@dimen/x7dp"
+                    android:text="@string/female"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="general_app_tutorial">
+        <item>Search your\nfavourite artiste\nby User ID or\nName</item>
+        <item>Here is where\nall the hottest\nand most\npopular artistes\nperform online.</item>
+        <item>Check out the up\nand coming new\nstars of Witkey</item>
+        <item>Make a date with\nall the female\nartistes housed\nunder this\nsection.</item>
+        <item>Find the hottest\nmale artistes in\nWitkey here.</item>
+        <item>Explore and\nparticipate in\nWitkey\'s monthly\nleaderboard events to\nwin rewards and\nachievement badges!</item>
+        <item>Click on any artiste\nyou fancy to view\ntheir live broadcast!</item>
+        <item>See the Top 50\nspenders,\nbroadcasters and\nfans on our\nWitkey Billboard.</item>
+        <item>Back to our home\npage on the Hottest\nArtiste.</item>
+        <item>Follow and be in\nthe forefront of\nthe latest news\nand happenings\non Witkey.</item>
+        <item>Exclusive for Artiste\nBroadcasters to\nperform \'live\' on cam\nbefore their fans and\nsupporters as well as\nto access their\nsummary reports.</item>
+        <item>Check any mails\nin your Inbox.</item>
+        <item>View your Profile\ndetails and stats here.</item>
+    </string-array>
+
+    <string-array name="go_live_app_tutorial">
+        <item>Broadcaster\'s profile,\nname, rank and\nnumber of tornados\nto show popularity rating.</item>
+        <item>Shows the real-time\nearnings of broadcaster\'s\nWitkey Dollars to date</item>
+        <item>Save to follow this\nBroadcaster as a\nfan for future.</item>
+        <item>Slide to see current\nnumber of live viewers\non this broadcast.</item>
+        <item>View current ranking\nposition of broadcaster\nin this leaderboard\ngame event.</item>
+        <item>Daily Task\nLeaderboard to\nearn daily rewards!</item>
+        <item>You can view the\nlive streaming of all\nmessages from\nfans to the\nbroadcaster.</item>
+        <item>Tap to live stream\nyour messages to\nthe broadcaster.</item>
+        <item>Screenshot this live\nbroadcast to your\ngallery or posts.</item>
+        <item>Share this live\nbroadcast with\nyour friends.</item>
+        <item>Check any mails\nfrom the\nbroadcaster or\nWitkey\'s admin\n support.</item>
+        <item>Check whether you have\nwon or earned any\nrewards in yout Gift Box.</item>
+        <item>Send gifts to the\nbroadcaster from a wide\nrange of animated gifts\nin the Gift Galore!</item>
+        <item></item>
+    </string-array>
+
+</resources>

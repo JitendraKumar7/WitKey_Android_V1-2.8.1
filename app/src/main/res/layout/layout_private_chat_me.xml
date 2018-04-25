@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x15dp"
+    android:layout_marginRight="@dimen/x15dp"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:id="@+id/mMessageParentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x5dp"
+        android:paddingTop="@dimen/x5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x20dp">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/messageDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_vertical"
+                android:text="0"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x20dp"
+            android:layout_marginTop="@dimen/x3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/messageImageView"
+                android:layout_width="@dimen/x35dp"
+                android:layout_height="@dimen/x35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10dp"
+                android:layout_marginRight="@dimen/x10dp" />
+
+            <LinearLayout
+                android:id="@+id/messageParentFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x10dp"
+                android:background="@drawable/message_bubble_outerline">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/messageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10dp"
+                    android:layout_marginLeft="@dimen/x20dp"
+                    android:layout_marginRight="@dimen/x100dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

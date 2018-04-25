@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_parent_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60dp"
+            android:background="@color/witkey_dim_white"
+            android:paddingLeft="@dimen/x0dp"
+            android:paddingRight="@dimen/x15dp">
+
+            <ImageView
+                android:id="@+id/mToolbarTitleImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/x0dp"
+                android:src="@drawable/logo_main"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="@dimen/x20dp"
+                android:paddingLeft="@dimen/x10dp"
+                android:paddingRight="@dimen/x10dp"
+                android:paddingTop="@dimen/x20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/icon_back"
+                android:tint="@color/witkey_orange"
+                android:visibility="visible" />
+<!--@string/top_broadcaster_cap-->
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/mToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/x0dp"
+                android:text="@string/billboard"
+                android:textColor="@color/witkey_orange"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/x13dp"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:src="@drawable/impressive_list" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

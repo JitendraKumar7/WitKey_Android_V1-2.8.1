@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/layout_message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/emptyGreyView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:background="@color/witkey_dim_silver" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x15dp"
+        android:layout_marginRight="@dimen/x15dp"
+        android:layout_marginTop="@dimen/x2dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/privacyPolicyParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/x10dp"
+            android:paddingTop="@dimen/x10dp"
+            android:weightSum="2">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|left"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|right">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_separator_dp"
+            android:background="@color/witkey_orange" />
+
+        <LinearLayout
+            android:id="@+id/userAgreementParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/x10dp"
+            android:paddingTop="@dimen/x10dp"
+            android:weightSum="2">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|left"
+                android:text="@string/user_agreement"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|right">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_separator_dp"
+            android:background="@color/witkey_orange" />
+
+        <LinearLayout
+            android:id="@+id/aboutOurCompanyParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/x10dp"
+            android:paddingTop="@dimen/x10dp"
+            android:weightSum="2">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|left"
+                android:text="@string/about_our_company"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|right">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_separator_dp"
+            android:background="@color/witkey_orange" />
+
+        <LinearLayout
+            android:id="@+id/communityConventionParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/x10dp"
+            android:paddingTop="@dimen/x10dp"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|left"
+                android:text="@string/community_convention"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|right">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_separator_dp"
+            android:background="@color/witkey_orange"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mWalletParentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x15dp"
+    android:layout_marginRight="@dimen/x15dp"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x5dp">
+
+        <RelativeLayout
+            android:id="@+id/walletParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/chipImageView"
+                android:layout_width="@dimen/x30dp"
+                android:layout_height="@dimen/x30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5dp"
+                android:src="@drawable/chip" />
+
+            <Button
+                android:id="@+id/btnChipPrice"
+                android:layout_width="@dimen/x80dp"
+                android:layout_height="@dimen/x25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/x5dp"
+                android:background="@drawable/button_rounded_corners"
+                android:gravity="center"
+                android:paddingBottom="@dimen/x1dp"
+                android:paddingLeft="@dimen/x0dp"
+                android:paddingRight="@dimen/x0dp"
+                android:paddingTop="@dimen/x1dp"
+                android:text="$0.00"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/chipsCustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5dp"
+                android:layout_toRightOf="@+id/chipImageView"
+                android:maxLength="8"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5dp"
+                android:layout_toRightOf="@+id/chipsCustomTextView"
+                android:visibility="gone">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:maxLength="8"
+                    android:text=" + "
+                    android:textColor="@color/witkey_orange"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tornado_new"
+                        android:visibility="gone" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:text="FREE"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/freeChips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/promotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5dp"
+                android:layout_toRightOf="@+id/free"
+                android:visibility="gone">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:maxLength="8"
+                    android:text=" + "
+                    android:textColor="@color/witkey_orange"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_promotion" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/promotionChips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/witkey_orange"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_separator_dp"
+            android:layout_below="@+id/walletParentFrame"
+            android:layout_marginTop="@dimen/x5dp"
+            android:background="@color/witkey_orange" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

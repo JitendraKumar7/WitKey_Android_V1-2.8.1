@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mNotificationParentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x15dp"
+    android:layout_marginRight="@dimen/x15dp"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/notificationParentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x5dp"
+        android:paddingTop="@dimen/x5dp">
+
+        <ImageView
+            android:id="@+id/notificationPersonImageView"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10dp" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/notificationSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/x10dp"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x1dp"
+            android:paddingTop="@dimen/x1dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:kswAnimationDuration="0"
+            app:kswThumbColor="@drawable/custom_switch_color" />
+
+        <!--<Switch
+            android:id="@+id/switchNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/x10dp"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x1dp"
+            android:paddingTop="@dimen/x1dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />-->
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/notificationNameCustomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20dp"
+            android:layout_toRightOf="@+id/notificationPersonImageView"
+            android:text="Name here"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_separator_dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/witkey_orange" />
+</RelativeLayout>

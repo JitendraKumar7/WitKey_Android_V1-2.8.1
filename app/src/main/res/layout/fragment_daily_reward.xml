@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg10"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/dailyRewardParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginLeft="@dimen/x15dp"
+            android:layout_marginRight="@dimen/x15dp"
+            android:background="@drawable/welcome_view_rounded_corners"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/customTextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/collect_your_daily_reward"
+                    android:textColor="@color/witkey_orange"
+                    android:textSize="@dimen/x25dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ScrollView
+                    android:id="@+id/SCROLLER_ID"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewRewards"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnCollectRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x45dp"
+                    android:background="@drawable/button_rounded_corners"
+                    android:paddingLeft="@dimen/x35dp"
+                    android:paddingRight="@dimen/x35dp"
+                    android:text="@string/collect_rewards"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x18dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

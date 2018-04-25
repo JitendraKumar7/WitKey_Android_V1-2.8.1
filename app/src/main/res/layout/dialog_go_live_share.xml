@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x30dp">
+
+        <ImageView
+            android:id="@+id/starImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facebookShareImageView"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/share_star" />
+
+        <ImageView
+            android:id="@+id/facebookShareImageView"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/facebook_share" />
+
+        <ImageView
+            android:id="@+id/googleShareImageView"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:src="@drawable/google_share" />
+
+        <ImageView
+            android:id="@+id/weChatShareImageView"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:src="@drawable/wechat_share" />
+
+        <ImageView
+            android:id="@+id/profileShareImageView"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:layout_below="@+id/starImageView"
+            android:src="@drawable/profile_share" />
+
+        <ImageView
+            android:id="@+id/phoneShareImageView"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:layout_below="@+id/starImageView"
+            android:src="@drawable/phone_share" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x30dp"
+            android:layout_below="@+id/phoneShareImageView" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+

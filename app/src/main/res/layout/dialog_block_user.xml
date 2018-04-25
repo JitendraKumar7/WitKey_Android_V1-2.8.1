@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <Button
+        android:id="@+id/btnBlockUser"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/x50dp"
+        android:layout_marginRight="@dimen/x50dp"
+        android:layout_marginTop="@dimen/x30dp"
+        android:background="@drawable/button_large_rounded_corners"
+        android:text="@string/block_user"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/x50dp"
+        android:layout_marginRight="@dimen/x50dp"
+        android:layout_marginTop="@dimen/x20dp"
+        android:background="@drawable/button_large_rounded_corners"
+        android:text="@string/cancel"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp" />
+</LinearLayout>
+
+
+

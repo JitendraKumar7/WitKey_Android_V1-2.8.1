@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:appBar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/goLiveParentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.witkey.live.activities.GoLiveActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.wowza.gocoder.sdk.api.devices.WZCameraView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true" />
+
+        <!--STREAM PLAY-->
+        <app.witkey.live.utils.customviews.FullScreenVideoView
+            android:id="@+id/video_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/userImageBlur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <app.witkey.live.utils.circleprogressbar.CircleProgressBar
+            android:id="@+id/custom_progress"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/x80dp"
+            android:layout_marginRight="@dimen/x30dp"
+            android:visibility="gone"
+            appBar:line_count="30"
+            appBar:line_width="4dp"
+            appBar:progress_background_color="@color/witkey_dim_white"
+            appBar:progress_end_color="@color/witkey_orange"
+            appBar:progress_shader="sweep"
+            appBar:progress_start_color="@color/witkey_orange"
+            appBar:progress_stroke_cap="round"
+            appBar:progress_stroke_width="6dp"
+            appBar:progress_text_color="@color/witkey_orange"
+            appBar:style="solid_line" />
+
+        <!--STREAM PLAY-->
+
+        <!--HERE PAGER STARTS-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/page_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--HERE PAGER STARTS-->
+
+                <!--CHAT VIEW STREAM CREATOR-->
+
+                <LinearLayout
+                    android:id="@+id/oldChatView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/goLiveBottomTabParent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/giftSlideInAnimation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x40dp"
+                        android:layout_marginBottom="@dimen/x5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/giftSlideInView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/slide_view_bullet_giftlayout"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/x5dp"
+                            android:paddingLeft="@dimen/x4dp"
+                            android:paddingRight="@dimen/x10dp"
+                            android:paddingTop="@dimen/x5dp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/micParent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x1dp">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginStart="@dimen/x0dp"
+                                        android:background="@drawable/button_rounded_corners">
+
+                                        <app.witkey.live.utils.customviews.CustomTextView
+                                            android:id="@+id/micTextView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:drawableLeft="@drawable/star"
+                                            android:drawablePadding="@dimen/x4dp"
+                                            android:gravity="center_vertical"
+                                            android:paddingLeft="@dimen/x5dp"
+                                            android:paddingRight="@dimen/x5dp"
+                                            android:text="0"
+                                            android:textColor="@color/white"
+                                            android:textSize="11dp"
+                                            android:textStyle="normal" />
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="@dimen/x18dp"
+                                        android:layout_height="@dimen/x18dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:background="@drawable/circle_fill_mic"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <app.witkey.live.utils.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/x5dp"
+                                android:gravity="center_vertical"
+                                android:text="User Name Here : Entered"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/x10dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/rl_footer"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:id="@+id/list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/x30dp"
+                            android:background="@color/transparent">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/mRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="170dp" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/goLiveBottomTabParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <!--TAB FOR STREAM VIEWER CHAT -->
+                    <LinearLayout
+                        android:id="@+id/goLiveChatViewer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x50dp"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/x5dp"
+                        android:paddingRight="@dimen/x5dp"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/accoucement" />
+
+                                <app.witkey.live.utils.customviews.CustomEditText
+                                    android:id="@+id/goLiveChatViewerEDT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical|left"
+                                    android:hint="@string/enter_text"
+                                    android:imeActionLabel="Send"
+                                    android:imeOptions="actionSend"
+                                    android:inputType="text"
+                                    android:paddingLeft="@dimen/x40dp"
+                                    android:paddingRight="@dimen/x5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/witkey_dark_brown"
+                                    android:textColorHint="@color/mdtp_dark_gray"
+                                    android:textSize="@dimen/x13dp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:weightSum="5">
+
+                            <LinearLayout
+                                android:id="@+id/goLiveViewerChatCamera"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="@dimen/x1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/camera_new" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/goLiveViewerChatPost"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="@dimen/x1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/send_message_new" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/goLiveViewerChatMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="@dimen/x1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/message2_new" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/goLiveViewerChatFolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="@dimen/x1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/folder_new" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/goLiveViewerChatGift"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="@dimen/x1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/gift2" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--TAB FOR STREAM CREATOR CHAT-->
+                    <LinearLayout
+                        android:id="@+id/goLiveChatCreator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/witkey_dim_white"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4">
+
+                            <app.witkey.live.utils.customviews.CustomEditText
+                                android:id="@+id/goLiveChatEDT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:hint="@string/enter_text"
+                                android:imeActionLabel="Send"
+                                android:imeOptions="actionSend"
+                                android:inputType="text"
+                                android:padding="@dimen/x15dp"
+                                android:textColor="@color/witkey_dark_brown"
+                                android:textColorHint="@color/mdtp_dark_gray"
+                                android:textSize="@dimen/x13dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.6">
+
+                            <ImageView
+                                android:id="@+id/closeChatTab"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_close_white_24dp"
+                                android:tint="@color/witkey_orange" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--TAB FOR GENERAL OPTIONS-->
+                    <LinearLayout
+                        android:id="@+id/goLiveBottomTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <include
+                            android:id="@+id/includedLayout"
+                            layout="@layout/layout_go_live_bottom_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x45dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--CHAT VIEW STREAM CREATOR-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goLiveTopView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x80dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="19dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_weight="2"
+                                android:orientation="vertical"
+                                android:weightSum="5">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.3"
+                                    android:gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginEnd="@dimen/x0dp"
+                                        android:layout_marginStart="@dimen/x15dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/userProfileView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_centerInParent="true"
+                                                android:layout_marginBottom="@dimen/x8dp"
+                                                android:layout_marginLeft="@dimen/x5dp"
+                                                android:layout_marginTop="@dimen/x8dp"
+                                                android:background="@drawable/button_rounded_corners">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="@dimen/x30dp"
+                                                    android:orientation="vertical"
+                                                    android:weightSum="2">
+
+                                                    <app.witkey.live.utils.customviews.CustomTextView
+                                                        android:id="@+id/userNameTextView"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="left|center_vertical"
+                                                        android:paddingLeft="@dimen/x8dp"
+                                                        android:paddingRight="@dimen/x10dp"
+                                                        android:singleLine="true"
+                                                        android:text="name"
+                                                        android:textColor="@color/white"
+                                                        android:textSize="@dimen/x8dp"
+                                                        android:textStyle="normal" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight="1"
+                                                        android:weightSum="2">
+
+                                                        <ImageView
+                                                            android:id="@+id/pointsTypeIV"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_weight="1.7"
+                                                            android:padding="@dimen/x1dp"
+                                                            android:src="@drawable/tornado_new" />
+
+                                                        <app.witkey.live.utils.customviews.CustomTextView
+                                                            android:id="@+id/userPointsTextView"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_gravity="center"
+                                                            android:layout_weight="0.3"
+                                                            android:gravity="center_vertical"
+                                                            android:paddingLeft="@dimen/x3dp"
+                                                            android:paddingRight="@dimen/x10dp"
+                                                            android:singleLine="true"
+                                                            android:text="200"
+                                                            android:textColor="@color/white"
+                                                            android:textSize="@dimen/x6dp"
+                                                            android:textStyle="normal" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/userImageParentFrame"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentLeft="true"
+                                                android:gravity="left"
+                                                android:orientation="horizontal"
+                                                android:weightSum="4">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginRight="@dimen/x0dp"
+                                                    android:layout_weight="1">
+
+                                                    <ImageView
+                                                        android:id="@+id/userImageIV"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_gravity="left"
+                                                        android:src="@drawable/go_live_circle_fill" />
+                                                </LinearLayout>
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1" />
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.9">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/x25dp"
+                                        android:layout_marginRight="@dimen/x0dp"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="@dimen/x0dp"
+                                            android:layout_marginRight="@dimen/x0dp"
+                                            android:layout_weight="1">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/broadcaster_rank_box_diamond"
+                                                    android:visibility="visible" />
+
+                                                <app.witkey.live.utils.customviews.CustomTextView
+                                                    android:id="@+id/userDiamondTextView"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginBottom="@dimen/x2dp"
+                                                    android:gravity="center"
+                                                    android:paddingLeft="@dimen/x2dp"
+                                                    android:text="0"
+                                                    android:textColor="@color/witkey_orange"
+                                                    android:textSize="@dimen/x7dp"
+                                                    android:textStyle="normal" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1">
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/userCoinsCountView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.8">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/x15dp"
+                                        android:weightSum="3">
+
+                                        <LinearLayout
+                                            android:id="@+id/userDollers"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.8">
+
+                                            <RelativeLayout
+                                                android:id="@+id/userCashParentFrame"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/price"
+                                                    android:visibility="visible" />
+
+                                                <app.witkey.live.utils.customviews.CustomTextView
+                                                    android:id="@+id/userCashTextView"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="@dimen/x25dp"
+                                                    android:layout_marginTop="@dimen/x0dp"
+                                                    android:gravity="center"
+                                                    android:text="0"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="@dimen/x7dp"
+                                                    android:textStyle="normal" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2.2" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:weightSum="5">
+
+                                    <LinearLayout
+                                        android:id="@+id/userViewParent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2.1"
+                                        android:orientation="vertical"
+                                        android:visibility="visible"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/userViewImageView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:scaleType="center"
+                                                android:src="@drawable/view" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.8">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            android:weightSum="2">
+
+                                            <LinearLayout
+                                                android:id="@+id/goLiveListParentLL"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.8">
+
+                                                <android.support.v7.widget.RecyclerView
+                                                    android:id="@+id/recyclerView"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:clickable="true" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.2">
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2.1"
+                                        android:orientation="vertical"
+                                        android:weightSum="2">
+
+                                        <ImageView
+                                            android:id="@+id/userCancelImageView_old"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:scaleType="center"
+                                            android:src="@drawable/ic_close_white_24dp"
+                                            android:visibility="invisible" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:visibility="invisible" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/goLiveCenterView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x80dp"
+                        android:layout_below="@+id/goLiveTopView"
+                        android:layout_marginTop="@dimen/x10dp"
+                        android:gravity="center"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/eventPosterIV"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/x5dp"
+                                android:src="@drawable/angel_vs_devil" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/dailyMissionEnergyImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/x15dp"
+                                android:src="@drawable/daily_mission" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <app.witkey.live.utils.animations.giftbullet.GiftView
+                        android:id="@+id/giftBulletView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/screenShotView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/x50dp"
+                    android:layout_marginLeft="@dimen/x35dp"
+                    android:layout_marginRight="@dimen/x35dp"
+                    android:layout_marginTop="@dimen/x50dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/screen_shot_border_rounded_corners"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/screenShotImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/screen_shot_image_rounded_corners"
+                                    android:padding="@dimen/x3dp"
+                                    android:scaleType="fitXY" />
+
+                                <ImageView
+                                    android:id="@+id/screenShotCloseImageView"
+                                    android:layout_width="@dimen/x40dp"
+                                    android:layout_height="@dimen/x40dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/screen_shot_cancel_rounded_corners"
+                                    android:scaleType="center"
+                                    android:src="@drawable/ic_close_white_24dp"
+                                    android:tint="@color/black" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"
+                            android:weightSum="2">
+
+                            <app.witkey.live.utils.customviews.CustomTextView
+                                android:id="@+id/screenShotPopupSave"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/save"
+                                android:textColor="@drawable/tab_text_selector"
+                                android:textSize="@dimen/x15dp" />
+
+                            <app.witkey.live.utils.customviews.CustomTextView
+                                android:id="@+id/screenShotPopupShare"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/share"
+                                android:textColor="@drawable/tab_text_selector"
+                                android:textSize="@dimen/x15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cameraMessagesParentFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/custom_toast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/x50dp"
+                        android:layout_marginLeft="@dimen/x25dp"
+                        android:layout_marginRight="@dimen/x25dp"
+                        android:orientation="vertical">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="@string/be_courteous_in_your_decorum"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/x10dp"
+                            android:gravity="center"
+                            android:text="@string/if_caught_account_will_be_immediately_banned"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="12sp" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/x10dp"
+                            android:layout_marginTop="@dimen/x10dp"
+                            android:gravity="center"
+                            android:text="@string/we_have_moderators_that_regularly"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!--<FrameLayout
+                    android:id="@+id/fragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />-->
+
+                <LinearLayout
+                    android:id="@+id/animationViewParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/x50dp"
+                    android:orientation="vertical">
+
+                    <app.witkey.live.utils.animations.BubbleViewAnimation
+                        android:id="@+id/bubbleViewGoLive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparent" />
+
+                </LinearLayout>
+
+                <!--HERE PAGER ENDS-->
+
+                <!--TOP ANIMATIONS-->
+
+                <ImageView
+                    android:id="@+id/topAnimationImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gifImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+                <!--TOP ANIMATIONS-->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </android.support.v4.view.ViewPager>
+        <!--HERE PAGER ENDS-->
+
+        <ImageView
+            android:id="@+id/userCancelImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/x20dp"
+            android:layout_marginTop="@dimen/x30dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_close_white_24dp" />
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+</LinearLayout>
+

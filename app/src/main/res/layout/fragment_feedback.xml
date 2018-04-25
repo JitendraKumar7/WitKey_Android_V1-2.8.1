@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/layout_message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/emptyGreyView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:background="@color/witkey_dim_silver" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x15dp"
+            android:layout_marginRight="@dimen/x15dp"
+            android:layout_marginTop="@dimen/x15dp"
+            android:orientation="vertical">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/natureOfFeedbackEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40dp"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:hint="@string/nature_of_feedback"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/typeBroadcast"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/broadcaster_problem"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/typeGift"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/gift_sending_problem"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/typeShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/unable_to_share"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/typeValue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/stored_value_problem"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/typeReward"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/unable_to_collect_rewards"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/others"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <app.witkey.live.utils.customviews.CustomEditText
+                android:id="@+id/feedbackEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x80dp"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="@string/type_your_feedback_here"
+                android:inputType="textEmailAddress"
+                android:maxLength="200"
+                android:padding="@dimen/x5dp"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/contact_capital"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <app.witkey.live.utils.customviews.CustomEditText
+                android:id="@+id/emailContactEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30dp"
+                android:background="@null"
+                android:hint="@string/leave_your_email_contact"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/x2dp"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_separator_dp"
+                android:background="@color/witkey_orange" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/x20dp"
+                android:layout_marginTop="@dimen/x35dp"
+                android:background="@drawable/button_large_rounded_corners"
+                android:text="@string/submit"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

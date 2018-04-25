@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/layout_message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/emptyGreyView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:background="@color/witkey_dim_silver" />
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:padding="@dimen/x20dp"
+            android:text="@string/welcome_desc"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </ScrollView>
+
+</LinearLayout>

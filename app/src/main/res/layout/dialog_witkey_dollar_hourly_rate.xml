@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x55dp"
+        android:layout_marginLeft="@dimen/x15dp"
+        android:layout_marginRight="@dimen/x15dp"
+        android:paddingLeft="@dimen/x35dp"
+        android:paddingRight="@dimen/x35dp"
+        android:paddingTop="@dimen/x15dp">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/hourly_ranking"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/witkey_orange"
+            android:textSize="13sp" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/ranking_of_broadcasters_is_based_on_the_amount_of_witkey_dollars_generated_in_the_last_hour"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/the_amount_of_witkey_dollars_is_computed_on_an_hourly_basis"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/the_top_10_broadcasters_in_each_hour_will_enjoy_1_hour_limelight_at_the_top_of_the_hottest_home_page"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/witkey_orange"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

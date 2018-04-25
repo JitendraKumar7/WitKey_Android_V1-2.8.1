@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/IndexBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80dp"
+        android:layout_marginBottom="@dimen/x5dp"
+        android:layout_marginTop="@dimen/x5dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:weightSum="3">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/broadcasterPosition_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/witkey_dark_brown"
+            android:textSize="@dimen/x15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/broadcasterImageBottom_IV"
+            android:layout_width="@dimen/x80dp"
+            android:layout_height="@dimen/x80dp"
+            android:layout_marginLeft="@dimen/x20dp"
+            android:padding="@dimen/x1dp"
+            android:src="@drawable/user_place_holder_round" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/broadcasterName_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20dp"
+            android:gravity="center"
+            android:maxLength="20"
+            android:text="0"
+            android:textColor="@color/witkey_dark_brown"
+            android:textSize="@dimen/x15dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_separator_dp"
+        android:background="@color/witkey_orange" />
+
+</LinearLayout>

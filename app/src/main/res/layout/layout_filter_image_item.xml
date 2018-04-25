@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mFilterImageParentFrame"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:id="@+id/filterImageParentFrame"
+        android:layout_width="100dp"
+        android:background="@drawable/white_color_rounded_corners"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/filterImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/place_holder_videos" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/filterNumber"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

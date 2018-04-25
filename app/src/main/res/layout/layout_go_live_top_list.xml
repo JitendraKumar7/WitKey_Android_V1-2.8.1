@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/goLiveListParent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/goLiveUserImageIV"
+        android:layout_width="@dimen/x40dp"
+        android:layout_height="@dimen/x40dp"
+        android:layout_marginLeft="@dimen/x8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/go_live_circle_fill" />
+</LinearLayout>

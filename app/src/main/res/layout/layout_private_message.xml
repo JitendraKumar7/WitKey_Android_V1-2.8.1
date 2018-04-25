@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayoutFeatured"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/layout_message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/saprator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:layout_below="@+id/includedLayout"
+        android:background="@color/witkey_dim_silver" />
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saprator"
+        android:layout_marginBottom="@dimen/x2dp">-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/saprator"
+        android:layout_marginBottom="@dimen/x50dp"
+        android:layout_marginTop="@dimen/x5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <app.witkey.live.utils.customviews.CustomTextView
+        android:id="@+id/noResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@color/witkey_dim_white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No Result"
+        android:textColor="@color/grey"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/goLiveChatCreator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <app.witkey.live.utils.customviews.CustomEditText
+                android:id="@+id/privateChatEDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/enter_text"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:padding="@dimen/x15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/mdtp_dark_gray"
+                android:textSize="@dimen/x13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="2.5">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/closeChatTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="SEND"
+                android:textColor="@color/witkey_orange" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

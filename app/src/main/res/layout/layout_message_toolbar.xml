@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_parent_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60dp"
+            android:background="@color/witkey_dim_white"
+            android:paddingLeft="@dimen/x0dp"
+            android:paddingRight="@dimen/x15dp">
+
+            <!--   <ImageView
+                   android:id="@+id/btnBack"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentTop="true"
+                   android:paddingLeft="@dimen/x8dp"
+                   android:paddingRight="@dimen/x20dp"
+                   android:scaleType="center"
+                   android:src="@drawable/ic_keyboard_arrow_left_white_36dp"
+                   android:tint="@color/witkey_orange"
+                   android:visibility="visible" />-->
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="@dimen/x10dp"
+                android:paddingRight="@dimen/x10dp"
+                android:paddingTop="@dimen/x20dp"
+                android:paddingBottom="@dimen/x20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/icon_back"
+                android:tint="@color/witkey_orange"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="@dimen/x20dp"
+                android:paddingRight="@dimen/x0dp"
+                android:paddingTop="@dimen/x5dp"
+                android:paddingBottom="@dimen/x15dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_check_white_24dp"
+                android:tint="@color/witkey_orange"
+                android:visibility="gone" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/mToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/x0dp"
+                android:text="@string/about_us"
+                android:textColor="@color/witkey_orange"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/messageOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <RadioGroup
+                    android:id="@+id/messageSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/witkey_dim_white"
+                    android:checkedButton="@+id/friends_RB"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/friends_RB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/x10dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="right"
+                        android:text="@string/friends"
+                        android:textColor="@drawable/radio_button_text_selector"
+                        android:textSize="@dimen/x15dp"
+                        android:textStyle="normal" />
+
+                    <RadioButton
+                        android:id="@+id/unread_RB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="left"
+                        android:text="@string/unread"
+                        android:textColor="@drawable/radio_button_text_selector"
+                        android:textSize="@dimen/x15dp"
+                        android:textStyle="normal" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

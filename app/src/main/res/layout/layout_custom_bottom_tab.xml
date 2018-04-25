@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mWalletParentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/witkey_dull_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x15dp"
+            android:paddingRight="@dimen/x15dp"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/x0dp">
+
+                <ImageView
+                    android:id="@+id/bottomTabHome"
+                    android:layout_width="@dimen/x35dp"
+                    android:layout_height="@dimen/x35dp"
+                    android:src="@drawable/ic_bottom_tab_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/x0dp">
+
+                <ImageView
+                    android:id="@+id/bottomTabLive"
+                    android:layout_width="@dimen/x35dp"
+                    android:layout_height="@dimen/x35dp"
+                    android:src="@drawable/ic_bottom_tab_2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/x3dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/x0dp">
+
+                <ImageView
+                    android:id="@+id/bottomTabMessage"
+                    android:layout_width="@dimen/x35dp"
+                    android:layout_height="@dimen/x35dp"
+                    android:src="@drawable/ic_bottom_tab_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/x0dp">
+
+                <ImageView
+                    android:id="@+id/bottomTabProfile"
+                    android:layout_width="@dimen/x35dp"
+                    android:layout_height="@dimen/x35dp"
+                    android:src="@drawable/ic_bottom_tab_4" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/bottomTabGolive"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_tab" />
+                <!--<ImageView-->
+                    <!--android:id="@+id/bottomTabGolive"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:background="@drawable/animation_list" />-->
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

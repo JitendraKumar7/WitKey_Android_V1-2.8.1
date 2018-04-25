@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/goLiveInviteListParent"
+    android:layout_width="@dimen/x100dp"
+    android:layout_height="@dimen/x100dp"
+    android:background="@color/transparent"
+    android:paddingLeft="@dimen/x1dp"
+    android:paddingRight="@dimen/x1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/optionDialogGuest1IV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:src="@drawable/mic" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/optionDialogGuest1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.2"
+            android:gravity="center"
+            android:text="Text"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/x13dp" />
+    </LinearLayout>
+</LinearLayout>

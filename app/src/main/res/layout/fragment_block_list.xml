@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includedLayout"
+            layout="@layout/layout_message_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/emptyGreyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30dp"
+            android:background="@color/witkey_dim_silver" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/rv_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x10dp"
+            android:layout_marginTop="@dimen/x5dp"
+            android:background="@color/witkey_dim_white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/blockListRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/rv_swipe_refresh_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_main" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/noResultTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/x5dp"
+                        android:layout_marginTop="@dimen/x5dp"
+                        android:background="@color/witkey_dim_white"
+                        android:gravity="center"
+                        android:text="@string/no_fan"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="@dimen/x15dp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/noResultTextView_"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/x5dp"
+                        android:layout_marginTop="@dimen/x5dp"
+                        android:background="@color/witkey_dim_white"
+                        android:gravity="center"
+                        android:text="@string/your_fans_will_be_visible_here"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/x13dp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/noResultRefreshTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/x5dp"
+                        android:layout_marginTop="@dimen/x5dp"
+                        android:gravity="center"
+                        android:text="Refresh"
+                        android:textColor="@color/witkey_under_line"
+                        android:textSize="@dimen/x15dp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

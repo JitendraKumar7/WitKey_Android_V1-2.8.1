@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x35dp"
+        android:paddingLeft="@dimen/x30dp"
+        android:paddingRight="@dimen/x30dp"
+        android:paddingTop="@dimen/x15dp">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/x20dp"
+            android:paddingRight="@dimen/x20dp"
+            android:text="@string/end_broadcast_now"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnEndBroadcastOk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30dp"
+            android:layout_marginLeft="@dimen/x5dp"
+            android:layout_marginRight="@dimen/x5dp"
+            android:layout_marginTop="@dimen/x10dp"
+            android:background="@drawable/button_rounded_corners"
+            android:paddingBottom="@dimen/x3dp"
+            android:paddingTop="@dimen/x3dp"
+            android:text="@string/ok_capital"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnEndBroadcastLater"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30dp"
+            android:layout_marginLeft="@dimen/x5dp"
+            android:layout_marginRight="@dimen/x5dp"
+            android:layout_marginTop="@dimen/x15dp"
+            android:background="@drawable/button_border_rounded_corners"
+            android:paddingBottom="@dimen/x3dp"
+            android:paddingTop="@dimen/x3dp"
+            android:text="@string/later"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/witkey_orange"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mUserLevelParentFrame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x3dp"
+    android:layout_marginRight="@dimen/x3dp"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/userLevelImageView"
+            android:layout_width="@dimen/x50dp"
+            android:layout_height="@dimen/x50dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/user_level_1_9" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/userLevelCustomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userLevelImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x5dp"
+            android:text="1 - 9"
+            android:textColor="@color/grey"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

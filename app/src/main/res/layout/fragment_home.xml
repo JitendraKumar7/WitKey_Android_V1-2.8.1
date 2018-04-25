@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/witkey_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includedLayout"
+            layout="@layout/layout_home_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/mHomeTabLayout"-->
+            <!--style="@style/HomeTabLayout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/x10dp"-->
+            <!--android:layout_marginRight="@dimen/x10dp"-->
+            <!--app:tabGravity="fill"-->
+            <!--app:tabIndicatorHeight="@dimen/x0dp"-->
+            <!--app:tabMaxWidth="@dimen/x0dp"-->
+            <!--app:tabMinWidth="@dimen/x0dp"-->
+            <!--app:tabMode="scrollable"-->
+            <!--app:tabPaddingEnd="-1dp"-->
+            <!--app:tabPaddingStart="-1dp"-->
+            <!--android:layout_centerInParent="true"/>-->
+
+
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/x5dp"-->
+            <!--android:background="@color/witkey_white"-->
+            <!--android:visibility="gone" />-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mHomeChildPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/witkey_white"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewTopLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

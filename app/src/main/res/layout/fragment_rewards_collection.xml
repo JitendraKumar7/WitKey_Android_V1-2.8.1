@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg10"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rewardCollectionParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginLeft="@dimen/x15dp"
+            android:layout_marginRight="@dimen/x15dp"
+            android:background="@drawable/welcome_view_rounded_corners"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:paddingTop="@dimen/x30dp"
+                        android:paddingBottom="@dimen/x30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/customTextViewTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/rewards_collected"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="@dimen/x25dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/user_place_holder_round"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-100dp"
+                        android:scaleType="fitStart"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/reward_collected" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnCollectRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x45dp"
+                    android:background="@drawable/button_rounded_corners"
+                    android:paddingLeft="@dimen/x55dp"
+                    android:paddingRight="@dimen/x55dp"
+                    android:text="@string/ok"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x18dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

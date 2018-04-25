@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mHowToLevelUpParentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x10dp"
+    android:layout_marginRight="@dimen/x10dp"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x15dp">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/levelUpProcedureCustomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x5dp"
+            android:gravity="center"
+            android:text="JUST LOGIN TO VIEW ANY BROADCAST"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/levelUpRewardCustomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/levelUpProcedureCustomTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x1dp"
+            android:gravity="center"
+            android:text="EARN 5 TORNADOS FOR EVERY 5 MIN VIEWING"
+            android:textColor="@color/witkey_orange"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

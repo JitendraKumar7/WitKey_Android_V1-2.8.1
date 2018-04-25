@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white">
+
+    <ImageView
+        android:id="@+id/goLiveCancelBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x10dp"
+        android:layout_marginTop="@dimen/x20dp"
+        android:src="@drawable/ic_close_white_24dp"
+        android:tint="@color/witkey_orange" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x50dp"
+        android:paddingRight="@dimen/x50dp">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_wait_any_longer"
+            android:textColor="@color/witkey_orange"
+            android:textSize="15sp" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20dp"
+            android:gravity="center"
+            android:text="@string/upload_your_genuine_and_high_quality_content_for_the_world_to_see_and_appreciate_please_register_yourself_as_an_artist_to_continue"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

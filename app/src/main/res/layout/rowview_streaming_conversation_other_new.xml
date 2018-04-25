@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mParentFrame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/x2dp"
+    android:paddingLeft="@dimen/x5dp"
+    android:paddingRight="@dimen/x5dp"
+    android:paddingTop="@dimen/x2dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:background="@drawable/chat_rounded_corners"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x3dp"
+        android:paddingLeft="@dimen/x5dp"
+        android:paddingRight="@dimen/x5dp"
+        android:paddingTop="@dimen/x3dp">
+
+        <ImageView
+            android:id="@+id/mUserProfileImage"
+            android:layout_width="@dimen/x40dp"
+            android:visibility="gone"
+            android:layout_height="@dimen/x40dp" />
+
+        <LinearLayout
+            android:id="@+id/micParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/x1dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/x0dp"
+                    android:background="@drawable/button_rounded_corners">
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/micTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:drawablePadding="@dimen/x4dp"
+                        android:drawableLeft="@drawable/star"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/x5dp"
+                        android:paddingRight="@dimen/x5dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x10dp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/x18dp"
+                    android:layout_height="@dimen/x18dp"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/circle_fill_mic" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/mUserProfileImage"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/mUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x0dp"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:minLines="1"
+                android:text=""
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x13dp" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/mUserMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x13dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/conversationGiftsIV"
+            android:layout_width="@dimen/x18dp"
+            android:layout_height="@dimen/x18dp"
+            android:layout_gravity="center"
+            android:padding="@dimen/x1dp"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/x2dp"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+</LinearLayout>

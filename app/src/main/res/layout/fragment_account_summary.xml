@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedLayout"
+        layout="@layout/layout_message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/emptyGreyView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:background="@color/witkey_dim_silver" />
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@null">-->
+
+    <LinearLayout
+        android:id="@+id/profileSettingParentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x10dp">
+
+
+            <ImageView
+                android:id="@+id/mProfileImageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/x2dp"
+                android:src="@drawable/user_place_holder_round" />
+
+            <ImageView
+                android:layout_width="@dimen/x30dp"
+                android:layout_height="@dimen/x30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x5dp"
+                android:background="@drawable/circle_fill"
+                android:scaleType="center"
+                android:src="@drawable/add_friend"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/profileNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x10dp"
+            android:text="SAM TAN"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/profileIDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/x4dp"
+            android:text="@string/witkey_id_no"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/userLevelDiamondParentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x10dp"
+                android:gravity="end">
+
+                <RelativeLayout
+                    android:id="@+id/userLevelBoxParentFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box" />
+
+                    <ImageView
+                        android:id="@+id/userRankIV"
+                        android:layout_width="@dimen/x30dp"
+                        android:layout_height="@dimen/x30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="@dimen/x4dp"
+                        android:paddingLeft="@dimen/x4dp"
+                        android:paddingRight="@dimen/x4dp"
+                        android:paddingTop="@dimen/x3dp"
+                        android:src="@drawable/moment" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/userLevelBoxTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="@dimen/x3dp"
+                        android:text="110"
+                        android:textColor="@color/witkey_orange"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/artistViewParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x8dp"
+                android:gravity="start">
+
+                <RelativeLayout
+                    android:id="@+id/diamondBoxParentFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box" />
+
+                    <ImageView
+                        android:id="@+id/artistRankIV"
+                        android:layout_width="@dimen/x30dp"
+                        android:layout_height="@dimen/x30dp"
+                        android:layout_alignBottom="@+id/diamondsCountBoxTextView"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="@dimen/x4dp"
+                        android:paddingLeft="@dimen/x4dp"
+                        android:paddingRight="@dimen/x4dp"
+                        android:paddingTop="@dimen/x3dp"
+                        android:src="@drawable/diamond" />
+
+                    <app.witkey.live.utils.customviews.CustomTextView
+                        android:id="@+id/diamondsCountBoxTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="@dimen/x3dp"
+                        android:text="150"
+                        android:textColor="@color/witkey_orange"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x0dp"
+                android:layout_marginRight="@dimen/x0dp"
+                android:layout_marginTop="@dimen/x6dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_separator_dp"
+                    android:background="@color/witkey_orange" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/todayBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_outerline">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/todayTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/today"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/monthBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_outerline">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/monthTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/month_of_date"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/yearBTN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_outerline">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/yearTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/year_of_date"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_separator_dp"
+                    android:background="@color/witkey_orange" />
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/accountSummaryRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/x2dp" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <LinearLayout
+                    android:id="@+id/noResultView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/logo_main" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/noResultTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/x5dp"
+                            android:layout_marginTop="@dimen/x5dp"
+                            android:gravity="center"
+                            android:text="@string/no_account_summary"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/x15dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/x5dp"
+                            android:layout_marginTop="@dimen/x5dp"
+                            android:gravity="center"
+                            android:text="@string/your_account_summary_will_be_visible_here"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/x13dp"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/noResultRefreshTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/x5dp"
+                            android:layout_marginTop="@dimen/x5dp"
+                            android:gravity="center"
+                            android:text="Refresh"
+                            android:textColor="@color/witkey_under_line"
+                            android:textSize="@dimen/x15dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomViewParent"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/witkey_dim_silver"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="@dimen/x5dp"
+                            android:paddingRight="@dimen/x5dp"
+                            android:singleLine="true"
+                            android:text="@string/your_total_witkey_dollars"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/witkeyDollarsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:text="$0"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="@dimen/x5dp"
+                            android:paddingRight="@dimen/x5dp"
+                            android:singleLine="true"
+                            android:text="@string/available_earnings"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/availableEarningTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:text="$0"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="@dimen/x5dp"
+                            android:paddingRight="@dimen/x5dp"
+                            android:singleLine="true"
+                            android:text="@string/withdraw_limit"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/withdrawLimitTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:text="$0"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/cashOutBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x40dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="@dimen/x20dp"
+                            android:layout_marginRight="@dimen/x20dp"
+                            android:background="@drawable/button_large_rounded_corners"
+                            android:gravity="center"
+                            android:text="@string/cash_out"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/buyChipsBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x40dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="@dimen/x20dp"
+                            android:layout_marginRight="@dimen/x20dp"
+                            android:background="@drawable/button_large_rounded_corners"
+                            android:gravity="center"
+                            android:text="@string/buy_chips"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomViewCashParent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/witkey_dim_silver"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/detailTitleTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/x5dp"
+                            android:paddingRight="@dimen/x5dp"
+                            android:text="@string/you_have_the_following_available_for_cash_out"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/amountTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="$0"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/cashOutNowBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x40dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="@dimen/x50dp"
+                            android:layout_marginRight="@dimen/x50dp"
+                            android:background="@drawable/button_large_rounded_corners"
+                            android:gravity="center"
+                            android:text="@string/confirm"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="top|center">
+
+                        <app.witkey.live.utils.customviews.CustomTextView
+                            android:id="@+id/cashOutNowCancelBTN"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x40dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="@dimen/x50dp"
+                            android:layout_marginRight="@dimen/x50dp"
+                            android:background="@drawable/button_border_rounded_corners_follow"
+                            android:gravity="center"
+                            android:text="@string/cancel_"
+                            android:textColor="@color/witkey_orange"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--</ScrollView>-->
+</LinearLayout>

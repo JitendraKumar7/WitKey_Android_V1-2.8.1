@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey_dark">#454545</color>
+    <color name="grey">#9b9b9b</color>
+    <color name="grey_light">#bdbdbd</color>
+    <color name="grey_lighter">#d7d7d7</color>
+
+    <color name="grey_transparent">#66000000</color>
+
+    <color name="grey_lightest">#F0F0F0</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="mdtp_accent_color">#009688</color>
+    <color name="mdtp_accent_color_dark">#00796b</color>
+
+    <color name="layout_background_dimmer">#aa000000</color>
+    <color name="witkey_white">#ffffff</color>
+    <!--<color name="witkey_yellow">#fca601</color>-->
+    <color name="witkey_yellow">#ff8c81</color>
+    <!--<color name="witkey_orange_lite">#f69e37</color>-->
+    <color name="witkey_orange_lite">#ff8c81</color>
+    <!--<color name="witkey_crown_1">#fdcb03</color>-->
+    <color name="witkey_crown_1">#ff8c81</color>
+    <color name="witkey_crown_2">#a3a5a8</color>
+    <color name="witkey_crown_3">#8b4c20</color>
+    <color name="witkey_orange">#ff8c81</color>
+    <color name="witkey_orange_alpha">#aaec7c31</color>
+    <color name="witkey_orange_alpha_">#81ec7c31</color>
+    <color name="witkey_dark_brown">#823b0a</color>
+    <color name="witkey_dim_white">#f9f8f8</color>
+    <color name="witkey_dull_white">#f1f1f1</color>
+    <color name="witkey_dim_silver">#ebeae8</color>
+    <color name="witkey_dim_Login">#fdfdfd</color>
+
+    <color name="witkey_profile">#e9e8e8</color>
+    <color name="witkey_shadow">#A06828</color>
+    <color name="witkey_under_line">#2f5cec</color>
+
+    <color name="fan_profile_bottom_bar">#c8bbb0</color>
+
+    <color name="witkey_progress_bar_background">#813d1e</color>
+
+    <color name="no_moment_color">#b5afaf</color>
+
+    <color name="gradient_start_transparent">#66ec7c31</color>
+    <color name="gradient_center_transparent">#66ed8742</color>
+    <color name="gradient_end_transparent">#66f78f49</color>
+</resources>

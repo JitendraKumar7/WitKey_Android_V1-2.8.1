@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mProfileParentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x15dp"
+    android:layout_marginRight="@dimen/x15dp"
+    android:background="@color/witkey_dim_white"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:paddingTop="@dimen/x5dp">
+
+    <RelativeLayout
+        android:id="@+id/profileParentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30dp"
+        android:layout_marginTop="@dimen/x5dp">
+
+        <LinearLayout
+            android:id="@+id/profileTopRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/profileItemNameTextView"
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.65"
+                android:gravity="center_vertical"
+                android:text="WITKEY DOLLARS EARNED"
+                android:textColor="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/itemImageView"
+                    android:layout_width="@dimen/x25dp"
+                    android:layout_height="@dimen/x25dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/dollar" />
+            </RelativeLayout>
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/itemValueTextView"
+                android:layout_width="@dimen/x0dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.25"
+                android:drawablePadding="@dimen/x5dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical|center"
+                android:text="217,988"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_separator_dp"
+        android:layout_below="@+id/profileParentFrame"
+        android:layout_marginTop="@dimen/x2dp"
+        android:background="@color/witkey_orange" />
+</RelativeLayout>

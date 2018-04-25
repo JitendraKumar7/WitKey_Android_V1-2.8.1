@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <app.witkey.live.utils.customviews.CustomTextView
+        android:id="@+id/cameraMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/x35dp"
+        android:layout_marginRight="@dimen/x35dp"
+        android:background="@drawable/black_color_rounded_corners"
+        android:gravity="center"
+        android:paddingBottom="@dimen/x20dp"
+        android:paddingLeft="@dimen/x20dp"
+        android:paddingRight="@dimen/x20dp"
+        android:paddingTop="@dimen/x20dp"
+        android:text="@string/what_viewers_see_is_the_opposite_of_what_you_see_now"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

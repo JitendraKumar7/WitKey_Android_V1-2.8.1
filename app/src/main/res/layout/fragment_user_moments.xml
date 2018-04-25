@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/witkey_dim_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includedLayout"
+            layout="@layout/layout_message_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30dp"
+            android:background="@color/witkey_dim_silver" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/witkey_dim_silver">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/witkey_dim_white"
+                android:orientation="vertical">
+
+                <app.witkey.live.utils.customviews.CustomEditText
+                    android:id="@+id/momentsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="@string/say_something"
+                    android:maxLength="140"
+                    android:padding="@dimen/x10dp"
+                    android:textSize="15sp" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/alphabetCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center|right"
+                    android:paddingRight="@dimen/x10dp"
+                    android:text="0/140"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x5dp"
+                    android:background="@color/witkey_dim_silver" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewMomentsImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/noResultParentFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/blocklist" />
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/noResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@color/witkey_dim_white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/no_block_list"
+            android:textColor="@color/grey"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</RelativeLayout>

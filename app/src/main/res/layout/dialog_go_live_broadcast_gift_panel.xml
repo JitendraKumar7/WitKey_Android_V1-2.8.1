@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:alpha="0.9"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:id="@+id/giftCardParent"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <app.witkey.live.utils.customviews.CustomTextView
+            android:id="@+id/giftPanelTopTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black_overlay"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/x15dp"
+            android:paddingLeft="@dimen/x20dp"
+            android:paddingRight="@dimen/x20dp"
+            android:paddingTop="@dimen/x5dp"
+            android:text="@string/text_broadcaster_when_sending_gift_and_your_name_will_glow_yellow"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/giftsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x48dp"
+            android:background="@color/black_overlay"
+            android:visibility="gone" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/giftsVP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x48dp"
+            android:background="@color/black_overlay">
+
+        </android.support.v4.view.ViewPager>
+
+
+    </LinearLayout>
+
+    <app.witkey.live.utils.animations.BubbleViewAnimation
+        android:id="@+id/bubbleView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/black_overlay"
+        android:paddingLeft="@dimen/x10dp"
+        android:paddingRight="@dimen/x10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/giftCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/addGiftCount"
+                android:layout_width="@dimen/x30dp"
+                android:layout_height="@dimen/x30dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_keyboard_arrow_up_white_24dp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="@dimen/x80dp"
+                android:layout_height="@dimen/x30dp"
+                android:background="@drawable/button_border_rounded_corners_state"
+                android:enabled="false"
+                android:paddingBottom="@dimen/x3dp"
+                android:paddingTop="@dimen/x3dp"
+                android:text="@string/send"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/witkey_orange"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/coinsParentTV"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/chips"
+                    android:layout_width="@dimen/x30dp"
+                    android:layout_height="@dimen/x30dp"
+                    android:padding="@dimen/x2dp"
+                    android:src="@drawable/chip" />
+
+                <app.witkey.live.utils.customviews.CustomTextView
+                    android:id="@+id/rechargeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/recharge"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/addChips"
+                    android:layout_width="@dimen/x20dp"
+                    android:layout_height="@dimen/x20dp"
+                    android:rotation="90"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_keyboard_arrow_up_white_24dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/x30dp"
+                android:layout_height="@dimen/x30dp"
+                android:layout_marginLeft="@dimen/x10dp"
+                android:layout_marginRight="@dimen/x5dp"
+                android:src="@drawable/energy" />
+
+            <app.witkey.live.utils.customviews.CustomTextView
+                android:id="@+id/userEnergy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/energy_"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/indicators"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/x0dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
